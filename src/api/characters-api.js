@@ -1,3 +1,6 @@
+
+// src/api/characters-api.js
+
 import characters from '../data/characters.json'
 
 /**
