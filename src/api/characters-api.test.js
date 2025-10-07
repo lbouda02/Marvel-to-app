@@ -1,6 +1,6 @@
 // src/api/characters-api.test.js
 
-import { describe, expect, jest, test } from '@jest/globals'
+import { describe, expect, jest, test } from '@jest/globals';
 
 import { getCharacters, getCharacterById } from './characters-api';
 import characters from '../data/characters.json';
@@ -30,6 +30,12 @@ describe('characters-api', () => {
         test('should return the correct character when a valid ID is provided', () => {
             const result = getCharacterById(1);
             expect(result).toEqual({ id: 1, name: 'Character One' });
+        });
+
+        // Nouveau test : levée d'erreur si ID non trouvé
+        test('should throw an error if no character is found with the given ID', () => {
+            const invalidId = 999;
+            expect(() => getCharacterById(invalidId)).toThrow(`Aucun personnage trouvé avec l'id ${invalidId}`);
         });
     });
 
