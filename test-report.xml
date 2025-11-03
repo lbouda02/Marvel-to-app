@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\lbouda02\dev\Marvel-To-App\marvel-app-2025\src\components\CharactersDetail.test.jsx">
-    <testCase name="CharacterDetail component renders &quot;No character&quot; when no character prop is provided" duration="23"/>
-    <testCase name="CharacterDetail component renders &quot;No character&quot; when character prop is an empty object" duration="3"/>
-    <testCase name="CharacterDetail component renders full character details when a character is provided" duration="41"/>
-    <testCase name="CharacterDetail component renders details but no image if thumbnail is missing" duration="6"/>
+  <file path="C:\Users\lbouda02\dev\Marvel-To-App\marvel-app-2025\src\pages\ContactPage.test.jsx">
+    <testCase name="ContactPage component renders heading, paragraph, email link, and sets document title" duration="69"/>
   </file>
-  <file path="C:\Users\lbouda02\dev\Marvel-To-App\marvel-app-2025\src\components\CharactersList.test.jsx">
-    <testCase name="CharactersList component renders an empty list when no characters prop is provided" duration="65"/>
-    <testCase name="CharactersList component renders an empty list when characters array is empty" duration="5"/>
-    <testCase name="CharactersList component renders all characters passed as props" duration="19"/>
+  <file path="C:\Users\lbouda02\dev\Marvel-To-App\marvel-app-2025\src\pages\AboutPage.test.jsx">
+    <testCase name="AboutPage component renders heading, paragraph, and sets document title" duration="62"/>
   </file>
-  <file path="C:\Users\lbouda02\dev\Marvel-To-App\marvel-app-2025\src\pages\CharacterDetailPage.test.jsx">
-    <testCase name="CharacterDetailPage renders character details from loader and sets document title" duration="109"/>
+  <file path="C:\Users\lbouda02\dev\Marvel-To-App\marvel-app-2025\src\pages\NotFoundPage.test.jsx">
+    <testCase name="NotFoundPage component renders heading, paragraph, and sets document title" duration="55"/>
   </file>
 </testExecutions>
