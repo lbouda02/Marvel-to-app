@@ -18,8 +18,8 @@ export const getCharacters = ({ sort = 'name', order = 'asc' } = {}) => {
     let cmp = 0;
 
     if (sort === 'name') {
-      const na = (a.name || '').toString();
-      const nb = (b.name || '').toString();
+      const na = (a.name).toString();
+      const nb = (b.name).toString();
       cmp = na.localeCompare(nb, undefined, { sensitivity: 'base' });
     } else {
       // sort by modified date (fallback to 0 if invalid)
