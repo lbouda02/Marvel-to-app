@@ -4,7 +4,6 @@ import ContactPage from './pages/ContactPage';
 import Layout from './Layout';
 import NotFoundPage from './pages/NotFoundPage';
 import { getCharacterById, getCharacters } from './api/characters-api';
-import { Component } from 'react';
 import CharacterDetailPage from './pages/CharacterDetailPage';
 
 // routes of the application
@@ -16,9 +15,16 @@ const routes = [
       {
         // main page
         index: true,
-        loader: async () => {
-          // return data from here
-          return { characters: await getCharacters() };
+        loader: async ({ request }) => {
+          const url = new URL(request.url);
+          const sort = url.searchParams.get('sort') || 'name';
+          const order = url.searchParams.get('order') || 'asc';
+
+          return {
+            characters: await getCharacters({ sort, order }),
+            sort,
+            order
+          };
         },
         Component: CharactersPage
       },
